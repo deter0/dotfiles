@@ -1,0 +1,8 @@
+#!/bin/sh
+INFO=$(amixer);
+MUTED="[off]";
+if [[ "$INFO" = *"$MUTED"* ]]; then
+	echo true
+else
+	echo false
+fi

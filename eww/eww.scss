@@ -1,0 +1,117 @@
+* {
+	all: unset; //Unsets everything so you can style everything from scratch
+	font-family: "FantasqueSansMono Nerd Font";
+}
+
+
+//Global Styles
+.bar {
+	background-color: rgba(0, 0, 0, 0.35);
+	color: #b0b4bc;
+	padding: 6px 15px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0;
+}
+
+$button-radius: 24px;
+$button-bg: rgba(255, 255, 255, 0.04);
+$icon-button-padding: 0px 27px 0 25px;
+
+.dnd {
+	margin: 0 0 0 15px;
+	font-size: 17px;
+	padding: $icon-button-padding;
+	background-color: $button-bg;
+	border-radius: $button-radius;
+	transition: all 0.3s;
+}
+
+.dnd:hover {
+	color: #D35D6E;
+	background-color: rgba(248, 122, 122, 0.04);
+}
+
+.disturb {
+	// font-size: 0px;
+	margin: 0 0;
+	transition: all 0.3s;
+	padding: 0px 0px;
+	opacity: 0;
+	background-color: $button-bg;
+	border-radius: $button-radius;
+}
+
+// Styles on classes (see eww.yuck for more information)
+
+.next {
+	margin: 0 14px 0 14px;
+	font-size: 18px;
+	background-color: #644ED6;
+	color: white;
+	border-radius: 14px;
+	padding: 4px 8px;
+}
+
+.sidestuff slider {
+	all: unset;
+	color: #ed29ff;
+	margin: 3px 0px;
+}
+
+.metric label {
+	font-size: 20;
+}
+
+.metric scale trough highlight {
+	all: unset;
+	background-color: #644ED6;
+	color: #000000;
+	border-radius: 10px;
+}
+.metric scale trough {
+	all: unset;
+	background-color: #644ED6;
+	border-radius: 50px;
+	min-height: 3px;
+	min-width: 50px;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+.metric scale trough highlight {
+	all: unset;
+	background-color: #644ED6;
+	color: #000000;
+	border-radius: 10px;
+}
+.metric scale trough {
+	all: unset;
+	background-color: #4e4e4e;
+	border-radius: 50px;
+	min-height: 3px;
+	min-width: 100px;
+	margin-left: 15px;
+	margin-right: 20px;
+}
+
+.label-ram {
+	font-size: 14px;
+}
+
+.workspace-highlight {
+	font-weight: bold;
+	color: rgb(100, 78, 214);
+	border: 2px solid rgb(100, 78, 214);;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.workspaces button {
+	border-color: rgb(100, 78, 214);
+	background-color: $button-bg;
+	border-radius: $button-radius;
+	padding: 0 16;
+}
+.workspaces button:hover {
+	color: #D35D6E;
+	background-color: rgba(248, 122, 122, 0.04);
+}
+

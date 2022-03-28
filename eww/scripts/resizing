@@ -1,0 +1,9 @@
+#!/bin/sh
+
+mode=$(i3-msg -t get_binding_state)
+echo $mode
+if [[ "$mode" == "{\"name\":\"resize\"}" ]]; then
+	echo "true"
+else
+	echo "false"
+fi

@@ -1,0 +1,77 @@
+Alacritty:
+
+env:
+  TERM: alacritty
+
+# Colors (Terminal.app Basic)
+colors:
+  name: Cloud
+  author: ""
+  primary:
+    background: "#29272E"
+    foreground: "#ffffff"
+  cursor:
+    text: "#000000"
+    cursor: "#ffffff"
+  normal:
+    black: "#222827"
+    red: "#d5a8e3"
+    green: "#9c75dd"
+    yellow: "#9898ae"
+    blue: "#654a96"
+    magenta: "#625566"
+    cyan: "#a9d1df"
+    white: "#e6ebe5"
+  bright:
+    black: "#5d6f74"
+    red: "#cd749c"
+    green: "#63b0b0"
+    yellow: "#c0c0dd"
+    blue: "#5786bc"
+    magenta: "#3f3442"
+    cyan: "#849da2"
+    white: "#d9d6cf"
+
+window:
+  opacity: 0.35
+  padding:
+    x: 25
+    y: 25
+
+    dynamic_padding: true
+    decoration: true
+
+font:
+  normal:
+    family: SFMono Nerd Font Mono
+    style: Medium 
+  bold:
+    family: SFMono Nerd Font Mono
+    style: Bold
+  italic:
+    family: SFMono Nerd Font Mono
+    style: Italic
+
+  bold_italic:
+    family: Fantasque Sans Mono
+    style: Bold
+
+  size: 12
+
+shell:
+  program: /bin/zsh
+
+cursor:
+  style: Beam
+  unfocused_hollow: false
+
+live_config_reload: true
+
+key_bindings:
+
+  - { key: Key0, mods: Control, action: ResetFontSize }
+
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+theme: Cloud
