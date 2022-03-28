@@ -1,0 +1,242 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail	: adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ * Edited for this particular configuration by Axarva.
+ */
+
+configuration {
+	lines: 5;
+	columns: 1;
+	font: "FatasqueSansMono Nerd Font 12";
+	bw: 0;
+	location: 0;
+	padding: 0;
+	fixed-num-lines: true;
+	show-icons: true;
+	icon-theme: "Reversal-purple-dark";
+	sidebar-mode: true;
+	separator-style: "none";
+	hide-scrollbar: true;
+	fullscreen: false;
+	fake-transparency: false;
+	scroll-method: 0;
+	window-format: "{c}";
+	click-to-exit: true;
+	show-match: false;
+	combi-hide-mode-prefix: false;
+	display-window: "ﬓ   Windows";
+	display-run: "  Run";
+	display-ssh: "  SSH";
+	display-drun: "  Applications";
+	display-combi: " ";
+}
+
+@import "black_launcher.rasi"
+
+* {
+	fg: rgba(14, 14, 14, 0.8);
+	background: rgba(254, 254, 254, 0.8);
+	border-color-v: rgba(190, 190, 190, 1);
+	blue: #644ED6; /*rgba(0, 122, 255, 1);*/
+}
+
+window {
+	background-color: @bg;
+}
+
+window {
+	border: 0px;
+	border-radius: 16px;
+	padding: 0px;
+	width: 45%;
+	border-color: @border-color-v;
+	background-color: @background;
+	border: 1px;
+}
+
+prompt {
+	spacing: 40;
+	border: 0;
+	text-color: @fg;
+	background: @bg;
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str: " ";
+	// margin: 0px 5px 0px 0px;
+	font: "FantasqueSansMono Nerd Font 18";
+	padding: 17px 22px;
+	// margin: 0px 0px 0px 16px;
+	background-color: rgba(0, 0, 0, 0);
+	text-color: rgba(0, 0, 0, 0.3);
+}
+
+case-indicator {
+	spacing: 0;
+	text-color: @fg;
+	font: "FiraCode Nerd Font";
+}
+
+entry {
+	font: "SF Pro 16";
+	font-weight: 600;
+	padding: 16px 22px;
+	text-color: rgba(0, 0, 0, 0.9);
+	background-color: rgba(0, 0, 0, 0);
+}
+
+inputbar  {
+	spacing: 0px;
+	fixed-height: 20px;
+	text-color: @fg;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 0px 0px 0px 0px;
+	border: 0 0 2px 0;
+	border-color: @border-color-v;
+	children: [ entry, textbox-prompt-colon ];
+}
+
+mainbox {
+	background-color: rgb(255, 255, 255, 0.8);
+	padding: 0;
+}
+
+listview {
+	fixed-height: 0;
+	border-radius: 0px;
+	border: 0 0 2px 0;
+	border-color: @border-color-v;
+	spacing: 0px;
+	margin: -2px 0px 0 0;
+	scrollbar: false;
+	background-color: rgb(215, 215, 215, 0.6);
+	padding: 0px 0px 0px 0px;
+}
+
+element {
+	border: 0px;
+	border-radius: 0px;
+	padding: 5px 10px;
+	/*fixed-height: 40px;*/
+	background-color: rgba(0, 0, 0, 0);
+	border-color: @border-color-v;
+}
+
+element-text {
+	padding: 6px 0 6px 4px;
+	background-color: rgba(0, 0, 0, 0);
+	text-color: rgba(24, 24, 24, 0.3);
+	font: "SF Pro 12";
+	highlight: underline;
+}
+
+element-icon {
+	size: 24px;
+	padding: 0 10px;
+	border-radius: 14px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+element normal.normal {
+	/* background-color: @bg; */
+}
+
+element normal.urgent {
+	background-color: @bg;
+	text-color: @red;
+}
+
+element normal.active {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-color: @bg;
+}
+
+element-text selected.normal {
+	background-color: rgba(0, 0, 0, 0);
+	text-color: rgba(0, 0, 0, 0.8);
+}
+
+element-icon selected.normal {
+	size: 24px;
+}
+
+element selected.normal {
+	background-color: rgba(255, 255, 255, 0.7);
+	text-color: rgba(0, 0, 0, 0.9);
+}
+
+element selected.urgent {
+	background-color: @bg;
+	text-color: @red;
+}
+
+element selected.active {
+	background-color: @blue;
+	text-color: rgba(255, 255, 255, 1);
+	/*	text-color:	   @bg; */
+}
+
+element alternate.normal {
+	background-color: @bg;
+	text-color: @fg;
+}
+
+element alternate.urgent {
+	background-color: @bg;
+	text-color: @fg;
+}
+
+element alternate.active {
+	background-color: @bg;
+	text-color: @fg;
+}
+
+sidebar {
+	border: 0px;
+	border-color: @ac;
+	border-radius: 4px;
+	background-color: rgb(255, 0, 0);
+}
+
+button {
+	margin: 14px;
+	border-radius: 14px;
+	border: 1px;
+	border-color: @border-color-v;
+	font: "FantasqueSansMono Nerd Font 12";
+	background-color: rgba(215, 215, 215, 0.9);
+	padding: 6px;
+	text-color: rgba(24, 24, 24, 0.3);
+}
+
+button selected {
+	background-color: #563DD2;
+	text-color: rgb(255, 255, 255);
+	border-color: rgb(190, 190, 190);
+}
+
+scrollbar {
+	width: 4px;
+	border: 0px;
+	handle-color: @fg;
+	handle-width: 8px;
+	padding: 0;
+}
+
+message {
+	border: 0px;
+	border-color: @ac;
+	padding: 1px;
+}
+
+textbox {
+	text-color: @fg;
+}
+
+mode-switcher {
+	background-color: rgba(0, 0, 0, 0);
+}

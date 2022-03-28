@@ -1,0 +1,16 @@
+/* colors -Authored by Axarva lol */
+
+* {
+  al:      #00000000;
+  bg:      rgba(48, 48, 48, 0);
+  bgr:     rgba(88, 88, 88, 0.333);
+  se:      #ffd5cdff;
+  fg:      #eeeeeeff;
+  ac:      rgba(200, 200, 200, 1);
+  red:     #EC7875ff;
+  green:   #61C766ff;
+  yellow:  #FDD835ff;
+  blue:    #42A5F5ff;
+  purple:  #BA68C8ff;
+  cyan:    #4DD0E1ff;
+}
