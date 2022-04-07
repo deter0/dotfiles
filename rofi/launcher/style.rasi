@@ -49,7 +49,7 @@ window {
 
 window {
 	border: 0px;
-	border-radius: 16px;
+	border-radius: 8px;
 	padding: 0px;
 	width: 45%;
 	border-color: @border-color-v;

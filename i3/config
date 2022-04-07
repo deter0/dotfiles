@@ -58,8 +58,8 @@ exec --no-startup-id $HOME/Documents/eww/target/release/eww open bar
 exec --no-startup-id dunst 
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
-bindsym $mod+Shift+t exec --no-startup-ip pkill xborder
-bindsym $mod+t exec --no-startup-id $HOME/Documents/xborder/xborder
+bindsym $mod+Shift+t exec --no-startup-id pkill xborders
+bindsym $mod+t exec --no-startup-id $HOME/Documents/xborder/xborders --border-width 3 --border-radius 8 --screen-rect 0x50x1920x1080
 
 # my audio fix
 exec --no-startup-id amixer sset Master off
@@ -90,15 +90,15 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 10%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 10%+
 
 # scroll audio
-bindsym --whole-window $mod+button4 exec --no-startup-id amixer set Master 10%+
-bindsym --whole-window $mod+button5 exec --no-startup-id amixer set Master 10%- 
+bindsym --whole-window $mod+button4 exec --no-startup-id clementine --volume-increase-by 25
+bindsym --whole-window $mod+button5 exec --no-startup-id clementine --volume-decrease-by 25
 
-bindsym $mod+b 		     exec --no-startup-id microsoft-edge-stable
+bindsym $mod+b 		     exec --no-startup-id firefox
 bindsym $mod+p 		     exec --no-startup-id picom --experimental-backends --backend=glx --xrender-sync-fence --glx-no-stencil --no-use-damage
 bindsym $mod+Shift+p 	     exec --no-startup-id pkill picom
 bindsym $mod+Shift+i         exec --no-startup-id pkill i3-layouts
 bindsym $mod+i               exec --no-startup-id i3-layouts
-bindsym $mod+m 		     exec --no-startup-id spotify
+bindsym $mod+m 		     exec --no-startup-id clementine
 
 
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -109,7 +109,7 @@ bindsym Print exec --no-startup-id ~/.sc.sh
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty 
+bindsym $mod+Return exec --no-startup-id konsole
 bindsym $mod+period exec --no-startup-id emoji-picker
 
 # kill focused window
@@ -244,7 +244,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-exec --no-startup-id $HOME/Documents/xborder/xborder
 set $inc 50 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -254,10 +253,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width $inc px
-        bindsym k resize grow height $inc px 
-        bindsym l resize shrink height $inc px
-        bindsym semicolon resize grow width $inc px
+        bindsym h resize shrink width $inc px
+        bindsym k resize shrink height $inc px
+        bindsym j resize grow height $inc px
+        bindsym l resize grow width $inc px
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width $inc px

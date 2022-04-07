@@ -1,4 +1,4 @@
-(defwidget bar []
+(defwidget bar2 []
   (centerbox :orientation "h"
     (workspaces)
     (music)
@@ -6,15 +6,19 @@
 
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    (button :class "ram-font-icon"
+            " ")
+    (button :class "label-text"
+            {round(EWW_RAM.used_mem_perc, 1) + "%"})
 		(metric :label {getmuted == "true" ? "婢" : "墳"}
 	    :onclick "amixer sset Master toggle"
             :value volume
 						:class "font-icon"
             :onchange "amixer -D pulse sset Master {}%")
-    (metric :label ""
-            :value {EWW_RAM.used_mem_perc}
-						:class "font-icon"
-            :onchange "")
+    ;(button :label ""
+    ;        :value {EWW_RAM.used_mem_perc}
+		;				 :class "font-icon"
+    ;        :onchange "")
     ;(metric :label "﫭"
 		;				:class "font-icon"
     ;        :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
@@ -72,26 +76,26 @@
            :value value
            :onchange onchange)))
 
-(defpoll getdnd :interval "50ms"
+(defpoll getdnd :interval "500ms"
 	"scripts/getdnd")
 
 (defpoll getresizing :interval "250ms"
 	"scripts/resizing")
 
-(defpoll getmuted :interval "50ms"
+(defpoll getmuted :interval "500ms"
 	"scripts/getmuted")
 
-(defpoll gworkspace :interval "50ms"
+(defpoll gworkspace :interval "200ms"
 	"scripts/getworkspace")
 
 (deflisten music :initial ""
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
 
-(defpoll volume :interval "1s"
+(defpoll volume :interval "3s"
   "scripts/getvol")
 
-(defpoll time :interval "1s"
-  "date '+%H:%M %b %d, %Y'")
+(defpoll time :interval "30s"
+  "date +\"   %I:%M %p          %b %m, %A\"")
 
 (defwindow bar
   :monitor 0
@@ -102,4 +106,4 @@
                       :height "10px"
                       :anchor "top center")
   :reserve (struts :side "top" :distance "4%")
-  (bar))
+  (bar2))

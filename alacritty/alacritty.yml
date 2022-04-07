@@ -2,7 +2,7 @@ Alacritty:
 
 env:
   TERM: alacritty
-
+  SHELL: fish
 # Colors (Terminal.app Basic)
 colors:
   name: Cloud
@@ -22,7 +22,6 @@ colors:
     magenta: "#625566"
     cyan: "#a9d1df"
     white: "#e6ebe5"
-  bright:
     black: "#5d6f74"
     red: "#cd749c"
     green: "#63b0b0"
@@ -33,7 +32,7 @@ colors:
     white: "#d9d6cf"
 
 window:
-  opacity: 0.35
+  opacity: 0.5
   padding:
     x: 25
     y: 25
@@ -43,27 +42,27 @@ window:
 
 font:
   normal:
-    family: SFMono Nerd Font Mono
+    family: FantasqueSansMono Nerd Font Mono
     style: Medium 
   bold:
-    family: SFMono Nerd Font Mono
+    family: FantasqueSansMono Nerd Font Mono
     style: Bold
   italic:
-    family: SFMono Nerd Font Mono
+    family: FantasqueSansMono Nerd Font Mono
     style: Italic
 
   bold_italic:
-    family: Fantasque Sans Mono
+    family: FantasqueSansMono Nerd Font Mono
     style: Bold
 
-  size: 12
+  size: 16
 
 shell:
-  program: /bin/zsh
+  program: /bin/fish
 
 cursor:
-  style: Beam
-  unfocused_hollow: false
+  style: Block
+  unfocused_hollow: true
 
 live_config_reload: true
 
