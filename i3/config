@@ -88,6 +88,7 @@ bindsym XF86AudioMute        exec --no-startup-id amixer set Master 0%
 
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 10%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 10%+
+bindsym $mod+period exec --no-startup-id emoji-picker
 
 # scroll audio
 bindsym --whole-window $mod+button4 exec --no-startup-id clementine --volume-increase-by 25
@@ -110,7 +111,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id konsole
-bindsym $mod+period exec --no-startup-id emoji-picker
 
 # kill focused window
 bindsym $mod+Shift+q kill

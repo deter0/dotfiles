@@ -5,10 +5,11 @@
 
 //Global Styles
 .bar {
-	background-color: rgba(0, 0, 0, 0.5);
-	color: #b0b4bc;
+	background-color: rgba(100, 78, 214, 0.15);
+	color: white;
+	//color: rgba(100, 78, 214, 0.2);
 	padding: 6px 15px;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	border: 2px solid rgba(100, 78, 214, 1);
 	border-top: none;
 	border-radius: 0 0 12px 12px;
 }
@@ -120,6 +121,6 @@ $icon-button-padding: 0px 27px 0 25px;
 	padding: 0 16;
 }
 .workspaces button:hover {
-	color: #d35d6e;
-	background-color: rgba(248, 122, 122, 0.04);
+	color: white; //rgba(100, 78, 214, 0.8);
+	background-color: rgba(100, 78, 214, 0.5);
 }

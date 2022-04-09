@@ -95,7 +95,7 @@
   "scripts/getvol")
 
 (defpoll time :interval "30s"
-  "date +\"   %I:%M %p          %b %m, %A\"")
+  "date +\"   %I:%M %p          %b %d, %A\"")
 
 (defwindow bar
   :monitor 0
